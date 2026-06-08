@@ -45,7 +45,7 @@ public class Grafo<T> {
     }
 
     public void mostrarGrafo() {
-        char[] alfa = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L'};
+        char[] alfa = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L','M','N','O','P'};
         System.out.print("  ");
         for (char i : alfa) System.out.print(i + " ");
         System.out.println();
