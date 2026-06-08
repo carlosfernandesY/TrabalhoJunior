@@ -62,7 +62,7 @@ public class Grafo<T> {
                 }
             }
         }
-        return distancia[destino];
+        return distancia[destino]-1;
     }
     public void mostrarGrafo() {
         char[] alfa = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L','M','N','O','P'};

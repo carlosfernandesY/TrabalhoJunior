@@ -29,6 +29,6 @@ void main(){
     grafo.adicionarAresta(14,15);
     grafo.mostrarGrafo();
 
-    System.out.println(grafo.distanciaEntreCidades(0,15));
+    System.out.println(grafo.distanciaEntreCidades(0,5));
 
 }
