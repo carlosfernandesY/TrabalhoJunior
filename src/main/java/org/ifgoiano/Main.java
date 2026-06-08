@@ -13,10 +13,15 @@ void main(){
     grafo.adicionarAresta(5,9);
     grafo.adicionarAresta(5,6);
     grafo.adicionarAresta(6,7);
-    grafo.adicionarAresta(6,11);
+    grafo.adicionarAresta(6,10);
+    grafo.adicionarAresta(7,11);
+
+
 
 
 
     grafo.mostrarGrafo();
+
+    System.out.println(grafo.buscarEmLargura(0).toString());
 
 }
