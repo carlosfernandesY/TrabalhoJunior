@@ -22,22 +22,13 @@ void main(){
     grafo.adicionarAresta(9,13);
     grafo.adicionarAresta(10,14);
     grafo.adicionarAresta(10,11);
+    grafo.adicionarAresta(10,9);
     grafo.adicionarAresta(11,15);
     grafo.adicionarAresta(13,12);
     grafo.adicionarAresta(14,13);
     grafo.adicionarAresta(14,15);
-    ;
-
-
-
-
-
-
-
-
-
     grafo.mostrarGrafo();
 
-    System.out.println(grafo.buscarEmLargura(0).toString());
+    System.out.println(grafo.distanciaEntreCidades(0,15));
 
 }

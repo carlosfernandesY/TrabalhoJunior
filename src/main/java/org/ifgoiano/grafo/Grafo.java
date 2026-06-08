@@ -5,6 +5,7 @@ import org.ifgoiano.fila.Node;
 
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class Grafo<T> {
@@ -43,7 +44,26 @@ public class Grafo<T> {
         return res;
 
     }
+    public int distanciaEntreCidades(int origem,int destino){
+        Fila<Integer> fila = new Fila<>();
+        int[] distancia = new int[numeroVertices];
+        Arrays.fill(distancia, -1);
 
+        distancia[origem] = 0;
+        fila.enfileirar(origem);
+
+        while (!fila.ehVazia()) {
+            int atual = fila.desifileirar().getData();
+
+            for (int i = 0; i < numeroVertices; i++) {
+                if (matriz[atual][i] == 1 && distancia[i] == -1) {
+                    distancia[i] = distancia[atual] + 1;
+                    fila.enfileirar(i);
+                }
+            }
+        }
+        return distancia[destino];
+    }
     public void mostrarGrafo() {
         char[] alfa = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L','M','N','O','P'};
         System.out.print("  ");
