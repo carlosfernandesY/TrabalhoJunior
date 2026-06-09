@@ -1,6 +1,13 @@
+
+/*
+Nome alunos: Carlos Roberto Ferreira Fernandes, Guilherme Cordeiro Cândido De sousa,Renan Henrique Gonçalves Justino
+Disciplina: Estrutura de Dados I
+Codificação: 08/06/2026
+
+Explicação: Essa classe é a implementação do TAD de uma fila para utilização no algoritmo de busca em largura
+usei como inspiração o exemplo passado em sala de aula
+ */
 package org.ifgoiano.fila;
-
-
 public class Fila<T> {
     Node<T> inicio;
     Node<T> fim;
@@ -23,13 +30,13 @@ public class Fila<T> {
         }
     }
 
-    public Node<T> desifileirar() {
+    public T desenfileirar() {
         if (ehVazia()) {
             System.out.println("Lista Vazia");
         } else {
             Node<T> aux  = this.inicio;
             this.inicio = this.inicio.prox;
-            return aux;
+            return aux.getData();
         }
 
         return  null;
@@ -54,9 +61,9 @@ public class Fila<T> {
         fila.enfileirar(3);
         fila.enfileirar(1);
         fila.mostrarFila();
-        fila.desifileirar();
-        fila.desifileirar();
-        fila.desifileirar();
+        fila.desenfileirar();
+        fila.desenfileirar();
+        fila.desenfileirar();
         System.out.println();
         fila.mostrarFila();
     }
